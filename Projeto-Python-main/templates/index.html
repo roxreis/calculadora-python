@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculadora | Python</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <section class="bg-light p-5 d-flex justify-content-center">
+        <div class="w-50 border p-4 bg-primary text-white">
+          <h1 class="display-4 text-center">CALCULA LEGAL</h1>
+          <hr />
+
+          <form action="/send" method="POST">
+            <input type="text" placeholder="Primeiro número" class="w-50 form-control my-3" name="num1">
+            <input type="text" placeholder="Segundo número" class="w-50 form-control my-3" name="num2">
+
+
+              <input type="radio" name="operacao" value="soma" checked>
+              <label for="soma">Soma</label>
+
+              <input type="radio" name="operacao" id="subt" value="subt">
+              <label for="subt">Subtrai</label>
+
+              <input type="radio" name="operacao" id="mult" value="mult">
+              <label for="mult">Multiplica</label>
+
+              <input type="radio" name="operacao" id="divi" value="divi">
+              <label for="divi">Divide</label>
+
+
+            <div class="mt-4">
+              <button class="btn btn-success">Calcular</button>
+              <button class="btn btn-danger" type="reset">Cancelar</button>
+            </div>
+
+            <input type="text" placeholder="Resultado" class="w-50 form-control my-3" disabled value="{{ sum }}">
+          </form>
+        </div>
+      <section/>
+  </body>
+</html>
