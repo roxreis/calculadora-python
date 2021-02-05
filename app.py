@@ -28,14 +28,6 @@ def send(sum=sum):
                 sum = int(num1) * int(num2)
                 return render_template('index.html', sum=sum)
 
-            elif operation == 'mod':
-                sum = int(num1) % int(num2)
-                return render_template('index.html', sum=sum)
-
-            elif operation == 'pot':
-                sum = int(num1) ** int(num2)
-                return render_template('index.html', sum=sum)
-
             elif operation == 'divi':
                 if (num2 != '0'):
                     sum = int(num1) / int(num2)
